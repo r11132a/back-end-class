@@ -16,7 +16,7 @@ namespace ExerciseOne
             Console.WriteLine("Select number to run");
             Console.WriteLine("1. Triangle (default size 6)");
             Console.WriteLine("2. FizzBuzz");
-            Console.WriteLine("3. ChessBoard");
+            Console.WriteLine("3. ChessBoard (default size 8)");
             var response = Console.ReadLine();
 
             Console.WriteLine();
