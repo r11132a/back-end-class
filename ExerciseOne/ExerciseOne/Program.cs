@@ -79,6 +79,7 @@ namespace ExerciseOne
         }
         #endregion
 
+        #region ChessBoard
         static void ChessBoard(int size = 8)
         {
             for(int i = 0;i < size;i++)
@@ -91,5 +92,6 @@ namespace ExerciseOne
                 Console.WriteLine();
             }
         }
+        #endregion
     }
 }
