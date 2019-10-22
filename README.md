@@ -15,3 +15,6 @@ Simple exercises from the C# Back End Class at Computer Coach that do not requir
   - Sum of a Range
   - Reversing Arrays and Checking Speed
   - Testing For Even
+- Vectors
+  - Vector Class
+  - xUnit tests
