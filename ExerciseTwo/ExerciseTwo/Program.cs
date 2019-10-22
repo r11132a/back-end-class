@@ -14,6 +14,8 @@ namespace ExerciseTwo
             Console.WriteLine("1. Min");
             Console.WriteLine("2. CountChar");
             Console.WriteLine("3. Range Functions");
+            Console.WriteLine("4. IsEven functions");
+            Console.WriteLine("5. Reverse Arrays");
             var command = Console.ReadLine();
 
             switch(command)
@@ -44,11 +46,46 @@ namespace ExerciseTwo
                     string[] numbers = input.Split(' ');
                     Console.WriteLine($"Sum of the range is: {SumOfRange(MakeRange(Int32.Parse(numbers[0]),Int32.Parse(numbers[1])))}");
                     break;
+
+                case "4":
+                    Console.Write("Enter a number to determine if it is even:  ");
+                    int number = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine($"IsEvenRecusive({number}) says {number} is {(IsEvenRecursive(number) ? "Even" : "Odd")}"); ;
+                    Console.WriteLine($"IsEven({number}) says {number} is {(IsEven(number) ? "Even" : "Odd")}");
+                    break;
+
+                case "5":
+                    Console.Write("Enter two numbers, seperated by a space, to generate an array:  ");
+                    input = Console.ReadLine();
+                    numbers = input.Split(' ');
+                    int[] arrayData = MakeRange(Int32.Parse(numbers[0]), Int32.Parse(numbers[1]));
+                    Console.WriteLine(String.Join(", ",arrayData));
+                    Console.WriteLine("ReverseArray:");
+                    Console.WriteLine(String.Join(", ", ReverseArray(arrayData)));
+                    Console.WriteLine("ReverseInPlace:");
+                    ReverseInPlace(arrayData);
+                    Console.WriteLine(String.Join(", ", arrayData));
+                    break;
             }
 
 
             return 0; // This is a good place for a breakpoint!
         }
+
+        public static bool IsEvenRecursive(int number)
+        {
+            switch(number)
+            {
+                case 0:
+                    return true;
+                case 1:
+                    return false;
+                default:
+                    return IsEvenRecursive(number - 2);
+            }
+        }
+
+        public static bool IsEven(int number) => number % 2 == 0 ? true : false;
 
         public static int[] ReverseArray(int[] array)
         {
@@ -56,7 +93,7 @@ namespace ExerciseTwo
 
             for(int i = array.Length - 1;i >= 0;i--)
             {
-                reversedArray[i - array.Length - 1] = array[i];
+                reversedArray[array.Length - 1 - i] = array[i];
             }
 
             return reversedArray;
@@ -69,7 +106,7 @@ namespace ExerciseTwo
 
             for(int i = array.Length - 1;i >= 0;i--)
             {
-                array[i - array.Length - 1] = oldArray[i];
+                array[array.Length - 1 - i] = oldArray[i];
             }
         }
 
