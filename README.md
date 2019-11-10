@@ -18,3 +18,6 @@ Simple exercises from the C# Back End Class at Computer Coach that do not requir
 - Vectors
   - Vector Class
   - xUnit tests
+- Group
+  - Group Class
+  - xUnit tests
