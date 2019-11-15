@@ -21,3 +21,5 @@ Simple exercises from the C# Back End Class at Computer Coach that do not requir
 - Group
   - Group Class
   - xUnit tests
+- Loop
+  - Small console program
