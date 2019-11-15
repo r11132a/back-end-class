@@ -23,3 +23,6 @@ Simple exercises from the C# Back End Class at Computer Coach that do not requir
   - xUnit tests
 - Loop
   - Small console program
+- Any and All
+  - Any Function
+  - All Function
